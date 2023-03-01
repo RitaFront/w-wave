@@ -1,0 +1,74 @@
+.hero {
+  padding: 30px 0 40px;
+
+  @include adaptive($small-desktop) {
+    padding: 82px 0 90px;
+  }
+
+  @include adaptive($ipad) {
+    padding: 91px 0 90px;
+  }
+
+  @include adaptive($tablet) {
+    padding: 40px 0 40px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .hero__info {
+      .hero__title {
+        margin: 0;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 100%;
+
+        @include adaptive($tablet) {
+          font-size: 32px;
+        }
+
+        span {
+          font-style: italic;
+          font-weight: 400;
+        }
+      }
+
+      .hero__descr {
+        margin-top: 14px;
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 635px;
+
+        @include adaptive($small-desktop) {
+          max-width: 539px;
+        }
+
+        @include adaptive($tablet) {
+          margin-top: 8px;
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+
+      .hero__btn {
+        margin-top: 45px;
+
+        @include adaptive($small-desktop) {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .hero__img {
+      @include adaptive($small-desktop) {
+        width: 256px;
+      }
+
+      @include adaptive($ipad) {
+        display: none;
+      }
+    }
+  }
+}

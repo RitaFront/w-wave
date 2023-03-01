@@ -107,3 +107,19 @@ body {
     max-width: 286px;
   }
 }
+
+.btn-violet {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: $white;
+  background-color: $violet;
+  padding: 25px 54px;
+  border-radius: 40px;
+
+  @include adaptive($tablet) {
+    padding: 17px 45px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
