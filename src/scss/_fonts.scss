@@ -1,1 +1,6 @@
 // @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@include font-face("Muller", "MullerLightItalic", 300, italic);
+@include font-face("Muller", "MullerRegular", 400, normal);
+@include font-face("Muller", "MullerRegularItalic", 400, italic);
+@include font-face("Muller", "MullerMedium", 500, normal);
+@include font-face("Muller", "MullerBold", 600, normal);

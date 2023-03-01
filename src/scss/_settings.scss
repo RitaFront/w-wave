@@ -8,19 +8,6 @@ html {
   box-sizing: inherit;
 }
 
-.page {
-  height: 100%;
-  font-family: var(--font-family, sans-serif);
-  -webkit-text-size-adjust: 100%;
-}
-
-.page__body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100%;
-  font-size: 16px;
-}
-
 img {
   height: auto;
   max-width: 100%;
@@ -78,18 +65,8 @@ a {
   clip: rect(0 0 0 0);
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: var(--container-width);
-}
-
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
-}
-
-.centered {
-  text-align: center;
 }
 
 .dis-scroll {
@@ -104,4 +81,29 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+body {
+  font-family: "Muller", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $black;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @include adaptive($small-desktop) {
+    max-width: 854px;
+  }
+
+  @include adaptive($ipad) {
+    max-width: 570px;
+  }
+
+  @include adaptive($phone) {
+    max-width: 286px;
+  }
 }
