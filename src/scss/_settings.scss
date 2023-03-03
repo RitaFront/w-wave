@@ -129,4 +129,8 @@ body {
   line-height: 100%;
   font-weight: 400;
   margin: 0;
+
+  @include adaptive($tablet) {
+    font-size: 24px;
+  }
 }

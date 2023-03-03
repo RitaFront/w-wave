@@ -2,6 +2,10 @@
   padding: 94px 0 94px;
   background-color: $light-gray;
 
+  @include adaptive($tablet) {
+    padding: 54px 0 56px;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -12,11 +16,33 @@
       flex-wrap: wrap;
       gap: 30px;
 
+      @include adaptive($tablet) {
+        margin-top: 20px;
+      }
+
       .podcasts__card {
         position: relative;
         display: flex;
         max-width: 540px;
         width: 100%;
+
+        @include adaptive($small-desktop) {
+          max-width: 396px;
+        }
+
+        @include adaptive($ipad) {
+          max-width: 540px;
+        }
+
+        @include adaptive($tablet) {
+          &:nth-last-child(-n + 4) {
+            display: none;
+          }
+        }
+
+        @include adaptive($phone) {
+          flex-direction: column;
+        }
 
         picture {
           flex-shrink: 0;
@@ -25,6 +51,10 @@
             display: block;
             width: 112px;
             height: 100%;
+
+            @include adaptive($phone) {
+              width: 100%;
+            }
           }
         }
 
@@ -36,6 +66,11 @@
           line-height: 10px;
           background-color: $light-gray;
           padding: 3px 6px;
+
+          @include adaptive($phone) {
+            top: 0;
+            bottom: unset;
+          }
         }
 
         .card__content {
@@ -47,6 +82,10 @@
             align-items: center;
             justify-content: space-between;
             padding: 24px 30px;
+
+            @include adaptive($phone) {
+              padding: 16px;
+            }
 
             .card__info {
               display: flex;
@@ -61,6 +100,11 @@
                 margin-top: 8px;
                 font-size: 20px;
                 line-height: 20px;
+
+                @include adaptive($phone) {
+                  font-size: 16px;
+                  line-height: 16px;
+                }
               }
 
               .card__author {
@@ -68,6 +112,41 @@
                 font-size: 16px;
                 line-height: 16px;
                 color: $dark-gray;
+
+                @include adaptive($phone) {
+                  font-size: 12px;
+                  line-height: 12px;
+                  margin-top: 5px;
+                }
+              }
+            }
+
+            .card__btn {
+              width: 48px;
+              height: 48px;
+
+              @include adaptive($phone) {
+                width: 36px;
+                height: 36px;
+              }
+
+              svg {
+                @include adaptive($phone) {
+                  width: 36px;
+                  height: 36px;
+                }
+
+                circle {
+                  @include adaptive($phone) {
+                    stroke: $violet;
+                  }
+                }
+
+                path {
+                  @include adaptive($phone) {
+                    fill: $violet;
+                  }
+                }
               }
             }
           }
@@ -78,6 +157,10 @@
             padding: 8px 0 6px 30px;
             border-top: 1px solid $light-gray;
 
+            @include adaptive($phone) {
+              padding: 6px 0 8px 34px;
+            }
+
             .card__views {
               display: flex;
               align-items: center;
@@ -85,6 +168,11 @@
               font-size: 16px;
               line-height: 16px;
               color: $dark-gray;
+
+              @include adaptive($phone) {
+                font-size: 12px;
+                line-height: 12px;
+              }
             }
           }
         }
@@ -98,6 +186,11 @@
       outline: 2px solid $violet;
       background-color: transparent;
       color: $violet;
+
+      @include adaptive($phone) {
+        margin-top: 30px;
+        padding: 16px 28px;
+      }
     }
   }
 }

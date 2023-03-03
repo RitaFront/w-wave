@@ -2,7 +2,7 @@
   padding: 30px 0 34px;
 
   @include adaptive($small-desktop) {
-    padding: 82px 0 90px;
+    padding: 82px 0 80px;
   }
 
   @include adaptive($ipad) {
