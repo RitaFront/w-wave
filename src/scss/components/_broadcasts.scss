@@ -1,0 +1,286 @@
+.broadcasts {
+  padding: 94px 0 94px;
+
+  @include adaptive($ipad) {
+    padding: 94px 0 26px;
+  }
+
+  @include adaptive($tablet) {
+    padding: 54px 0 26px;
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+
+    @include adaptive($ipad) {
+      flex-direction: column;
+    }
+
+    .broadcasts__left {
+      max-width: 255px;
+      width: 100%;
+      margin-right: 30px;
+
+      .broadcasts__info {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        max-width: 255px;
+        width: 100%;
+
+        @include adaptive($tablet) {
+          margin-top: 20px;
+        }
+
+        .broadcasts__author {
+          font-size: 16px;
+          line-height: 16px;
+          color: $dark-gray;
+
+          @include adaptive($phone) {
+            font-size: 12px;
+            line-height: 12px;
+          }
+        }
+
+        .broadcasts__select {
+          margin-top: 8px;
+          height: 40px;
+          background-color: $light-gray;
+          border-radius: 10px;
+          border: none;
+          padding: 12px;
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    .broadcasts__cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding-top: 14px;
+
+      @include adaptive($small-desktop) {
+        gap: 30px 29px;
+        padding-top: 13px;
+      }
+
+      @include adaptive($ipad) {
+        gap: 30px;
+        padding: 0;
+        margin-top: 47px;
+      }
+
+      @include adaptive($tablet) {
+        margin-top: 30px;
+        justify-content: space-between;
+      }
+
+      @include adaptive($phone) {
+        margin-top: 28px;
+      }
+
+      .broadcasts__item {
+        display: flex;
+        flex-direction: column;
+        max-width: 255px;
+        width: 100%;
+
+        @include adaptive($tablet) {
+          max-width: 150px;
+        }
+
+        @include adaptive($phone) {
+          max-width: 113px;
+        }
+
+        picture {
+          img {
+            display: block;
+          }
+        }
+
+        .item__content {
+          display: flex;
+          flex-direction: column;
+          padding: 20px 0 20px 16px;
+          outline: 1px solid $light-gray;
+
+          @include adaptive($tablet) {
+            padding: 10px 12px 12px 10px;
+          }
+
+          @include adaptive($phone) {
+            height: 99px;
+          }
+
+          .item__name {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 20px;
+
+            @include adaptive($tablet) {
+              font-size: 12px;
+              line-height: 12px;
+            }
+          }
+
+          .item__time {
+            margin-top: 4px;
+            font-size: 12px;
+            line-height: 12px;
+            color: $dark-gray;
+
+            @include adaptive($tablet) {
+              font-size: 9px;
+              line-height: 9px;
+            }
+          }
+
+          .item__link {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 16px;
+            font-style: italic;
+            color: $black;
+
+            @include adaptive($phone) {
+              margin-top: auto;
+              font-size: 12px;
+              line-height: 12px;
+              color: $violet;
+            }
+
+            svg path {
+              @include adaptive($phone) {
+                fill: $violet;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .broadcasts__archive {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 255px;
+    width: 100%;
+
+    &.--adaptive {
+      @include adaptive($ipad) {
+        display: none;
+      }
+    }
+
+    @include adaptive($small-desktop) {
+      bottom: 50%;
+      transform: translateY(63%);
+    }
+
+    @include adaptive($ipad) {
+      position: static;
+      transform: unset;
+      flex-direction: row;
+      gap: 20px;
+      max-width: fit-content;
+    }
+
+    @include adaptive($phone) {
+      gap: 11px;
+    }
+
+    picture {
+      @include adaptive($ipad) {
+        flex-shrink: 0;
+      }
+
+      @include adaptive($phone) {
+        height: 105px;
+      }
+
+      img {
+        @include adaptive($ipad) {
+          width: 70px;
+          height: 96px;
+        }
+
+        @include adaptive($phone) {
+          width: 77px;
+          height: 105px;
+        }
+      }
+    }
+
+    .archive__content {
+      max-width: 255px;
+      width: 100%;
+
+      @include adaptive($phone) {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 166px;
+      }
+    }
+
+    .broadcasts__btn {
+      margin-top: 20px;
+      padding: 10px 54px;
+      max-width: fit-content;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      border: 2px solid $black;
+      border-radius: 77px;
+
+      @include adaptive($ipad) {
+        margin: 0;
+      }
+
+      @include adaptive($phone) {
+        margin-top: 7px;
+        padding: 8px 30px;
+      }
+    }
+
+    .archive__info {
+      display: block;
+      margin-top: 7px;
+      font-size: 16px;
+      line-height: 24px;
+      color: $dark-gray;
+
+      @include adaptive($phone) {
+        margin: 0;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  &__footer {
+    display: none;
+
+    @include adaptive($ipad) {
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+      border-top: 1px solid $light-gray;
+      margin-top: 61px;
+    }
+
+    @include adaptive($phone) {
+      margin-top: 31px;
+      padding-top: 29px;
+    }
+  }
+}
