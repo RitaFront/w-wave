@@ -102,8 +102,10 @@
             }
 
             svg {
-              width: 30px;
-              height: 30px;
+              @include adaptive($phone) {
+                width: 30px;
+                height: 30px;
+              }
             }
           }
 
@@ -121,6 +123,10 @@
 
               @include adaptive($small-desktop) {
                 gap: 13px 29px;
+              }
+
+              @include adaptive($ipad) {
+                gap: 27px 29px;
               }
 
               @include adaptive($phone) {
@@ -189,8 +195,10 @@
           }
 
           svg {
-            width: 36px;
-            height: 36px;
+            @include adaptive($phone) {
+              width: 36px;
+              height: 36px;
+            }
           }
         }
 
