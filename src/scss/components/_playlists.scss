@@ -1,8 +1,12 @@
 .playlists {
   padding: 94px 0 94px;
 
+  @include adaptive($ipad) {
+    padding: 94px 0 89px;
+  }
+
   @include adaptive($tablet) {
-    padding: 54px 0 54px;
+    padding: 54px 0 48px;
   }
 
   .container {
