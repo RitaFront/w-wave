@@ -1,0 +1,158 @@
+<section class="about">
+  <div class="about__content">
+    <div class="about__info --bg">
+      <div class="container --bg">
+        <h2 class="about__title title">О нас</h2>
+        <span class="about__text">
+          Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!
+        </span>
+        <p class="about__descr">
+          Друзья, мы будем очень рады, если вы поможете стать нам лучше.
+          Нам важен каждый слушатель, поэтому вы можете поделиться обратной
+          связью о наших предеачах, темах, подборках и вообще обо всём!
+          Это можно сделать либо написав нам в форме ниже, либо кликнув на наши
+          соцсети в подвале сайта. Спасибо! Услышимся!:)
+        </p>
+      </div>
+    </div>
+    <div class="about__quests">
+      <div class="container">
+        <button class="about__btn-left about__btn btn-reset">
+          <svg
+            width="42"
+            height="42"
+            viewBox="0 0 42 42"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="21"
+              cy="21"
+              r="20"
+              transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 42 42)"
+              stroke="#A1A6B4"
+              stroke-width="2"
+            />
+            <path
+              d="M23 29L15 21L23 13"
+              stroke="#A1A6B4"
+              stroke-width="2"
+              stroke-linecap="square"
+            />
+          </svg>
+        </button>
+        <button class="about__btn-right about__btn btn-reset">
+          <svg
+            width="42"
+            height="42"
+            viewBox="0 0 42 42"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="21"
+              cy="21"
+              r="20"
+              transform="rotate(-90 21 21)"
+              stroke="#A1A6B4"
+              stroke-width="2"
+            />
+            <path
+              d="M19 29L27 21L19 13"
+              stroke="#A1A6B4"
+              stroke-width="2"
+              stroke-linecap="square"
+            />
+          </svg>
+        </button>
+        <ul class="slider list-reset --none">
+          <li class="slider__card">
+            <picture>
+              <source
+                srcset="../img/about/people-1.jpg"
+                media="(max-width: 1023px)"
+              />
+              <source
+                srcset="../img/about/people-1_1024.jpg"
+                media="(max-width: 1199px)"
+              />
+              <img src="../img/about/people-1.jpg" alt="" />
+            </picture>
+            <div class="slider__info">
+              <span class="slider__title"> Дмитрий Гутенберг </span>
+              <span class="slider__descr">
+                Эксперт (ну, почти) по всем вопросам (почти)
+              </span>
+            </div>
+          </li>
+          <li class="slider__card">
+            <picture>
+              <source
+                srcset="../img/about/people-2.jpg"
+                media="(max-width: 1023px)"
+              />
+              <source
+                srcset="../img/about/people-2_1024.jpg"
+                media="(max-width: 1199px)"
+              />
+              <img src="../img/about/people-2.jpg" alt="" />
+            </picture>
+            <div class="slider__info">
+              <span class="slider__title"> Анна Васильева </span>
+              <span class="slider__descr">
+                Как я здесь оказалась? А главное — зачем?
+              </span>
+            </div>
+          </li>
+          <li class="slider__card">
+            <picture>
+              <img src="../img/about/people-3.png" alt="" />
+            </picture>
+            <div class="slider__info">
+              <span class="slider__title"> Пётр Дмитриевский</span>
+              <span class="slider__descr">
+                Господа! Внимание! Благодарю за внимание!
+              </span>
+            </div>
+          </li>
+          <li class="slider__card">
+            <picture>
+              <img src="../img/about/people-4.jpg" alt="" />
+            </picture>
+            <div class="slider__info">
+              <span class="slider__title">Татьяна Флеганова</span>
+              <span class="slider__descr">
+                Одна я в пальто стою красивая, а вокруг…
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <form action="" class="form">
+      <div class="container">
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Что скажете?"
+          required
+          class="form__textarea"
+        ></textarea>
+        <div class="form__input">
+          <input type="text" placeholder="Имя" required />
+          <input type="email" placeholder="Email" required />
+        </div>
+        <button class="form__btn btn-reset">Отправить</button>
+        <div class="form__check">
+          <label for="check">
+            <input type="checkbox" name="check" id="check" />
+            Согласен на обработку персональных данных
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
