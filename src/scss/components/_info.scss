@@ -1,4 +1,4 @@
-.about {
+.info {
   padding: 94px 0 133px;
   background-color: $light-black;
 
@@ -33,7 +33,7 @@
       gap: 36px;
     }
 
-    .about__img {
+    .info__img {
       position: relative;
 
       @include adaptive($small-desktop) {
@@ -91,7 +91,7 @@
       }
     }
 
-    .about__info {
+    .info__descr {
       max-width: 445px;
 
       @include adaptive($small-desktop) {
@@ -102,7 +102,7 @@
         max-width: 100%;
       }
 
-      .about__title {
+      .info__title {
         color: $cream;
         position: relative;
         padding-bottom: 28px;
@@ -121,13 +121,13 @@
           position: absolute;
           bottom: 0;
           left: 0;
-          background-image: url("../../img/about/hr.png");
+          background-image: url("../../img/info/hr.png");
           background-repeat: no-repeat;
           width: 100%;
           height: 12px;
 
           @include adaptive($ipad) {
-            background-image: url("../../img/about/hr_tablet.png");
+            background-image: url("../../img/info/hr_tablet.png");
             width: 540px;
           }
 
@@ -137,7 +137,7 @@
         }
       }
 
-      .about__descr {
+      .info__text {
         margin: 0;
         font-size: 16px;
         line-height: 29px;
@@ -154,7 +154,7 @@
         margin-top: 12px;
       }
 
-      .about__price {
+      .info__price {
         display: block;
         margin-top: 30px;
         font-weight: 500;
@@ -169,7 +169,7 @@
         }
       }
 
-      .about__btn {
+      .info__btn {
         margin-top: 30px;
         display: flex;
         align-items: center;
