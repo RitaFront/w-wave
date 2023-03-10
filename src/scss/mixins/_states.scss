@@ -1,0 +1,405 @@
+@import "../mixins/disable-mob-hover";
+
+@mixin link-states($left, $top, $width, $height) {
+  transition: color 0.2s ease-in-out;
+
+  &::before {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  @include hover {
+    color: $violet;
+  }
+
+  &:focus {
+    position: relative;
+    outline: none;
+    color: $white;
+
+    &::before {
+      position: absolute;
+      left: $left;
+      top: $top;
+      width: calc(100% + $width);
+      height: calc(100% + $height);
+      content: "";
+      background: $light-violet;
+      opacity: 1;
+      z-index: -1;
+    }
+  }
+
+  &:active {
+    color: $dark-violet;
+
+    &::before {
+      content: "";
+      opacity: 0;
+    }
+  }
+}
+
+@mixin arrow {
+  svg path {
+    transition: fill 0.2s ease-in-out;
+  }
+  @include hover {
+    svg path {
+      fill: $violet;
+    }
+  }
+
+  &:focus {
+    svg path {
+      fill: $white;
+    }
+  }
+
+  &:active {
+    svg path {
+      fill: $dark-violet;
+    }
+  }
+}
+
+@mixin search-states {
+  svg path {
+    transition: stroke 0.2s ease-in-out;
+  }
+
+  @include hover {
+    svg path {
+      stroke: $light-violet;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    svg path {
+      stroke: $light-violet;
+    }
+  }
+
+  &:active {
+    svg path {
+      stroke: $dark-violet;
+    }
+  }
+}
+
+@mixin btn__header {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  @include hover {
+    background-color: $black;
+    color: $white;
+  }
+
+  &:focus {
+    background-color: $light-violet;
+    outline: none;
+    color: $black;
+  }
+
+  &:active {
+    background-color: $dark-violet;
+    color: $white;
+  }
+}
+
+@mixin btn {
+  transition: background-color 0.2s ease-in-out;
+
+  @include hover {
+    background-color: $light-violet;
+  }
+
+  &:focus {
+    outline: 2px solid $dark-violet;
+    outline-offset: -2px;
+    background-color: $light-violet;
+  }
+
+  &:active {
+    background-color: $dark-violet;
+  }
+}
+
+@mixin brn__podcasts {
+  transition: all 0.2s ease-in-out;
+
+  @include hover {
+    background-color: $violet;
+    color: $white;
+  }
+
+  &:focus {
+    background-color: $light-violet;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $dark-violet;
+    outline: 2px solid $dark-violet;
+    color: $white;
+  }
+}
+
+@mixin btn__ether {
+  svg g path {
+    transition: fill 0.2s ease-in-out;
+  }
+  @include hover {
+    svg g path {
+      fill: $violet;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    svg g path {
+      fill: $light-violet;
+    }
+  }
+
+  &:active {
+    svg g path {
+      fill: $dark-violet;
+    }
+  }
+}
+
+@mixin btn__card {
+  svg {
+    transition: fill 0.2s ease-in-out;
+
+    & circle {
+      transition: stroke 0.2s ease-in-out;
+    }
+
+    & path {
+      transition: fill 0.2s ease-in-out;
+    }
+  }
+  @include hover {
+    svg circle {
+      stroke: $violet;
+    }
+
+    svg path {
+      fill: $violet;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    svg circle {
+      stroke: $light-violet;
+    }
+
+    svg path {
+      fill: $light-violet;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $dark-violet;
+    }
+    svg circle {
+      stroke: $dark-violet;
+    }
+
+    svg path {
+      fill: $white;
+    }
+  }
+}
+
+@mixin btn__guests {
+  transition: all 0.2s ease-in-out;
+
+  svg circle {
+    transition: stroke 0.2s ease-in-out;
+  }
+
+  svg path {
+    transition: stroke 0.2s ease-in-out;
+  }
+  @include hover {
+    color: $light-violet;
+
+    svg circle {
+      stroke: $light-violet;
+    }
+
+    svg path {
+      stroke: $light-violet;
+    }
+  }
+
+  &:focus {
+    color: $white;
+    outline: none;
+    background-color: $light-black;
+
+    svg circle {
+      stroke: $dark-gray;
+    }
+
+    svg path {
+      stroke: $dark-gray;
+    }
+  }
+
+  &:active {
+    color: $light-violet;
+    background-color: transparent;
+
+    svg {
+      fill: $light-violet;
+    }
+
+    svg circle {
+      stroke: $light-violet;
+    }
+
+    svg path {
+      stroke: $white;
+    }
+  }
+}
+
+@mixin btn__author {
+  @include hover {
+    background-color: $light-violet;
+    color: $white;
+  }
+
+  &:focus {
+    background-color: $violet;
+    border: 2px solid $violet;
+    color: $white;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $dark-violet;
+    border: 2px solid $dark-violet;
+    color: $white;
+  }
+}
+
+@mixin social {
+  svg g path {
+    transition: fill 0.2s ease-in-out;
+  }
+
+  @include hover {
+    svg path {
+      fill: $violet;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    svg path {
+      fill: $light-violet;
+    }
+  }
+
+  &:active {
+    svg path {
+      fill: $dark-violet;
+    }
+  }
+}
+
+@mixin radio {
+  @include hover {
+    span {
+      outline: 2px solid $violet;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    span {
+      outline: 2px solid $violet;
+      background-color: $gray;
+    }
+  }
+}
+
+@mixin btn__info {
+  transition: all 0.2s ease-in-out;
+
+  svg path {
+    transition: all 0.2s ease-in-out;
+  }
+
+  @include hover {
+    background-color: $cream;
+    color: $black;
+
+    svg path:nth-child(1) {
+      fill: $black;
+    }
+
+    svg path:nth-child(2) {
+      fill: $cream;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $brown;
+    color: $black;
+
+    svg path:nth-child(1) {
+      fill: $cream;
+    }
+
+    svg path:nth-child(2) {
+      fill: $black;
+    }
+  }
+
+  &:active {
+    border: 2px solid $brown;
+    background-color: $brown;
+    color: $black;
+
+    svg path:nth-child(1) {
+      fill: $black;
+    }
+
+    svg path:nth-child(2) {
+      fill: $brown;
+    }
+  }
+}
+
+@mixin input {
+  @include hover {
+    background-color: $light-black;
+  }
+
+  &:focus {
+    background-color: $light-black;
+    border: 1px solid $light-violet;
+  }
+
+  &:active {
+    background-color: $black;
+    border: 1px solid $white;
+    color: $white;
+  }
+}

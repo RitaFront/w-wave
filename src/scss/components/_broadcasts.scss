@@ -84,10 +84,44 @@
       }
 
       .broadcasts__item {
+        position: relative;
         display: flex;
         flex-direction: column;
         max-width: 255px;
         width: 100%;
+
+        @include hover {
+          img {
+            opacity: 0.7;
+          }
+
+          .item__content a {
+            color: $violet;
+
+            & svg path {
+              fill: $violet;
+            }
+          }
+        }
+
+        &:has(.item__content a:focus) {
+          outline: 1px solid $violet;
+          outline-offset: 7px;
+        }
+
+        &:has(.item__content a:active) {
+          img {
+            opacity: 0.7;
+          }
+
+          .item__content a {
+            color: $dark-violet;
+
+            & svg path {
+              fill: $dark-violet;
+            }
+          }
+        }
 
         @include adaptive($tablet) {
           max-width: 150px;
@@ -148,6 +182,28 @@
             line-height: 16px;
             font-style: italic;
             color: $black;
+            width: fit-content;
+
+            &:focus,
+            &:focus-visible {
+              outline: 3px solid $light-violet;
+              outline-offset: -1px;
+              background-color: $light-violet;
+              color: $white;
+
+              svg path {
+                fill: $white;
+              }
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
 
             @include adaptive($phone) {
               margin-top: auto;
@@ -241,6 +297,8 @@
       line-height: 16px;
       border: 2px solid $black;
       border-radius: 77px;
+
+      @include btn__header;
 
       @include adaptive($ipad) {
         margin: 0;

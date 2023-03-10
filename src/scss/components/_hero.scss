@@ -55,6 +55,8 @@
       .hero__btn {
         margin-top: 45px;
 
+        @include btn;
+
         @include adaptive($small-desktop) {
           margin-top: 20px;
         }

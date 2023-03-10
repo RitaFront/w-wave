@@ -139,6 +139,8 @@
             padding-left: 42px;
             cursor: pointer;
 
+            @include radio;
+
             @include adaptive($small-desktop) {
               padding-left: 41px;
             }
@@ -278,6 +280,84 @@
         flex-direction: column;
         max-width: 160px;
         width: 100%;
+        cursor: pointer;
+
+        @include hover {
+          picture {
+            &::before {
+              opacity: 0.8;
+            }
+
+            &::after {
+              opacity: 1;
+            }
+          }
+
+          .playlist__item__descr {
+            background-color: $violet;
+            border: 1px solid $violet;
+
+            .descr__title {
+              color: $white;
+            }
+
+            .descr__info {
+              color: $white;
+            }
+          }
+        }
+
+        &:focus {
+          outline: none;
+
+          picture {
+            &::before {
+              opacity: 0.8;
+            }
+
+            &::after {
+              opacity: 1;
+            }
+          }
+
+          .playlist__item__descr {
+            background-color: $light-violet;
+            border: 1px solid $light-violet;
+
+            .descr__title {
+              color: $black;
+            }
+
+            .descr__info {
+              color: $black;
+            }
+          }
+        }
+
+        &:active {
+          picture {
+            &::before {
+              opacity: 0.8;
+            }
+
+            &::after {
+              opacity: 1;
+            }
+          }
+
+          .playlist__item__descr {
+            background-color: $dark-violet;
+            border: 1px solid $dark-violet;
+
+            .descr__title {
+              color: $white;
+            }
+
+            .descr__info {
+              color: $white;
+            }
+          }
+        }
 
         @include adaptive($small-desktop) {
           max-width: 255px;
@@ -291,6 +371,35 @@
 
         picture {
           flex-shrink: 0;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            transition: all 0.3s ease-in-out;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $black;
+            opacity: 0;
+            z-index: 5;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            transition: all 0.3s ease-in-out;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../../img/playlists/play_btn.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            opacity: 0;
+            z-index: 6;
+          }
 
           @include adaptive($small-desktop) {
             width: 112px;
@@ -333,6 +442,7 @@
           flex-direction: column;
           border: 1px solid $light-gray;
           padding: 16px 0 16px 16px;
+          transition: all 0.3s ease-in-out;
 
           @include adaptive($small-desktop) {
             justify-content: center;
@@ -348,6 +458,7 @@
             font-size: 16px;
             line-height: 16px;
             font-weight: 500;
+            transition: all 0.3s ease-in-out;
 
             @include adaptive($tablet) {
               font-size: 12px;
@@ -360,6 +471,7 @@
             font-size: 12px;
             line-height: 12px;
             color: $dark-gray;
+            transition: all 0.3s ease-in-out;
 
             @include adaptive($tablet) {
               font-size: 9px;
