@@ -403,3 +403,45 @@
     color: $white;
   }
 }
+
+@mixin btn__close {
+  svg circle {
+    transition: stroke 0.3s ease-in-out;
+  }
+
+  svg path {
+    transition: stroke 0.3s ease-in-out;
+  }
+
+  @include hover {
+    svg circle {
+      stroke: $violet;
+    }
+
+    svg path {
+      stroke: $violet;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    svg circle {
+      stroke: $light-violet;
+    }
+
+    svg path {
+      stroke: $light-violet;
+    }
+  }
+
+  &:active {
+    svg circle {
+      stroke: $dark-violet;
+    }
+
+    svg path {
+      stroke: $dark-violet;
+    }
+  }
+}
