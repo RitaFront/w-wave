@@ -5,3 +5,5 @@ import "./_modal";
 import "./_play-pause";
 import "./_burger";
 import "./_header-btn";
+import "./_podcasts";
+import "./_podcastsObj";
