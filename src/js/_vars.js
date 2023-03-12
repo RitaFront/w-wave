@@ -15,4 +15,16 @@ export default {
   ethers: {
     btnEther: document.querySelectorAll(".ether__btn"),
   },
+  btnPlay: document.querySelector(".btn__play"),
+  burger: {
+    btn: document.querySelector(".burger"),
+    menu: document.querySelector(".burger__open"),
+    btnClose: document.querySelector(".menu__close"),
+  },
+  btnHeader: document.querySelector(".header__bottom__btn"),
+  players: document.querySelector(".players"),
+  podcasts: {
+    btnPlay: document.querySelectorAll(".card__btn"),
+  },
+  playlist: document.querySelectorAll(".playlist__item"),
 };

@@ -445,3 +445,23 @@
     }
   }
 }
+
+@mixin burger {
+  @include hover {
+    span {
+      background-color: $light-violet;
+    }
+  }
+
+  &:focus {
+    span {
+      background-color: $light-violet;
+    }
+  }
+
+  &:active {
+    span {
+      background-color: $dark-violet;
+    }
+  }
+}

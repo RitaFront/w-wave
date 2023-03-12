@@ -36,7 +36,81 @@
             />
           </svg>
         </a>
-        <div class="burger"><span></span><span></span><span></span></div>
+        <button class="burger btn-reset">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="burger__open">
+          <div class="container">
+            <button class="menu__close btn-reset">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="4.5752"
+                  y="2.95406"
+                  width="24"
+                  height="3"
+                  rx="1.5"
+                  transform="rotate(45 4.5752 2.95406)"
+                  fill="#6D31EE"
+                />
+                <rect
+                  x="21.5459"
+                  y="5.07538"
+                  width="24"
+                  height="3"
+                  rx="1.5"
+                  transform="rotate(135 21.5459 5.07538)"
+                  fill="#6D31EE"
+                />
+              </svg>
+            </button>
+            <div class="burger__content">
+              <ul class="menu__list list-reset">
+                <li class="menu__item">
+                  <a href="" class="menu__link">Подкасты</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Плейлисты</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Передачи</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">О нас</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Гости</a>
+                </li>
+              </ul>
+
+              <ul class="burger__list list-reset">
+                <li class="burger__item">
+                  <a href="" class="burger__link">Новости</a>
+                </li>
+                <li class="burger__item">
+                  <a href="" class="burger__link">Опросы</a>
+                </li>
+                <li class="burger__item">
+                  <a href="" class="burger__link">Блоги</a>
+                </li>
+                <li class="burger__item">
+                  <a href="" class="burger__link">Рейтинги</a>
+                </li>
+                <li class="burger__item">
+                  <a href="" class="burger__link">Топы</a>
+                </li>
+                <li class="burger__item">
+                  <a href="" class="burger__link">Реклама</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <nav class="nav">
           <ul class="nav__list list-reset">
             <li class="nav__item"><a href="" class="nav__link">Подкасты</a></li>
@@ -136,17 +210,21 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_24531_5430)">
+            <g class="ether--play" clip-path="url(#clip0_24531_5430)">
               <path
                 d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z"
                 fill="#A1A6B4"
               />
             </g>
-            <defs>
-              <clipPath id="clip0_24531_5430">
-                <rect width="24" height="24" fill="white" />
-              </clipPath>
-            </defs>
+
+            <g class="ether--pause" clip-path="url(#clip0_24531_3491)">
+              <path
+                d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z"
+                fill="#A1A6B4"
+              />
+              <rect x="9" y="8" width="2" height="8" rx="1" fill="white" />
+              <rect x="13" y="8" width="2" height="8" rx="1" fill="white" />
+            </g>
           </svg>
         </button>
         <div class="ethers">
@@ -215,6 +293,74 @@
         </div>
         <div class="censure">
           <img src="../img/header/censure.png" alt="Censure" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="players">
+    <div class="container">
+      <div class="players__content">
+        <div class="ether">
+          <button class="ether__btn btn-reset">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g class="ether--play" clip-path="url(#clip0_24531_5430)">
+                <path
+                  d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z"
+                  fill="#A1A6B4"
+                />
+              </g>
+
+              <g class="ether--pause" clip-path="url(#clip0_24531_3491)">
+                <path
+                  d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z"
+                  fill="#A1A6B4"
+                />
+                <rect x="9" y="8" width="2" height="8" rx="1" fill="white" />
+                <rect x="13" y="8" width="2" height="8" rx="1" fill="white" />
+              </g>
+            </svg>
+          </button>
+          <div class="ether__info">
+            <span class="ether__title">Ранее в эфире</span>
+            <span class="ether__descr">«Музыка»</span>
+          </div>
+        </div>
+        <div class="ether">
+          <button class="ether__btn btn-reset">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g class="ether--play" clip-path="url(#clip0_24531_5430)">
+                <path
+                  d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z"
+                  fill="#A1A6B4"
+                />
+              </g>
+
+              <g class="ether--pause" clip-path="url(#clip0_24531_3491)">
+                <path
+                  d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z"
+                  fill="#A1A6B4"
+                />
+                <rect x="9" y="8" width="2" height="8" rx="1" fill="white" />
+                <rect x="13" y="8" width="2" height="8" rx="1" fill="white" />
+              </g>
+            </svg>
+          </button>
+          <div class="ether__info">
+            <span class="ether__title">Сейчас в эфире</span>
+            <span class="ether__descr">«Как так?»</span>
+          </div>
         </div>
       </div>
     </div>

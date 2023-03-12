@@ -480,6 +480,12 @@
           }
         }
       }
+
+      .playlist--toggle {
+        picture::after {
+          background-image: url("../../img/playlists/pause.png");
+        }
+      }
     }
   }
 

@@ -30,7 +30,7 @@
     }
 
     &__content {
-      position: relative;
+      // position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -74,6 +74,8 @@
         position: relative;
         outline: none;
 
+        @include burger;
+
         @include adaptive($ipad) {
           display: flex;
         }
@@ -97,6 +99,111 @@
 
           &:nth-child(3) {
             bottom: 0;
+          }
+        }
+
+        &__open {
+          display: none;
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          left: 0;
+          top: 0;
+          background-color: $gray;
+          z-index: 2;
+
+          @include adaptive($tablet) {
+            padding: 80px 0 0;
+          }
+
+          .container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background-image: url("../../img/header/bg_burger.png"),
+              url("../../img/header/bg_burger-2.png");
+            background-repeat: no-repeat;
+            background-position: right 142px bottom, right 15px top;
+
+            @include adaptive($tablet) {
+              background-image: none;
+              align-items: unset;
+              padding: 0;
+              max-width: 100%;
+            }
+          }
+
+          .menu__close {
+            position: absolute;
+            top: 88px;
+
+            @include adaptive($tablet) {
+              top: 28px;
+              left: 32px;
+            }
+          }
+
+          .burger__content {
+            background-color: $white;
+
+            .menu__list {
+              display: flex;
+              flex-wrap: wrap;
+              max-width: 270px;
+              width: 100%;
+              gap: 64px 48px;
+              background-color: $gray;
+
+              @include adaptive($tablet) {
+                gap: 10px;
+                padding: 0 32px 24px 32px;
+                max-width: 100%;
+              }
+
+              .menu__item {
+                @include adaptive($tablet) {
+                  width: 100%;
+
+                  &:nth-child(even) {
+                    text-align: end;
+
+                    .menu__link {
+                      display: inline-block;
+                      width: 108px;
+                      text-align: left;
+                    }
+                  }
+                }
+
+                .menu__link {
+                  font-size: 20px;
+                  line-height: 20px;
+                  color: $black;
+                }
+              }
+            }
+
+            .burger__list {
+              display: none;
+              flex-wrap: wrap;
+              gap: 30px 78px;
+
+              @include adaptive($tablet) {
+                display: flex;
+                padding: 30px 32px;
+              }
+
+              .burger__item {
+                width: 72px;
+                height: fit-content;
+
+                .burger__link {
+                  font-size: 16px;
+                  line-height: 16px;
+                  color: $black;
+                }
+              }
+            }
           }
         }
       }
@@ -168,6 +275,10 @@
         transform: translateX(-100%);
         transition: width 0.3s ease, opacity 0.2s ease;
 
+        @include adaptive($big-phone) {
+          padding: 0;
+        }
+
         &::placeholder {
           font-size: 16px;
           line-height: 16px;
@@ -178,6 +289,10 @@
       .--input__open {
         width: 308px;
         opacity: 1;
+
+        @include adaptive($big-phone) {
+          width: 189px;
+        }
       }
     }
   }
@@ -221,9 +336,22 @@
         color: $violet;
         align-items: center;
         gap: 5px;
+        width: 100%;
+        justify-content: center;
 
         @include adaptive($tablet) {
           display: flex;
+        }
+
+        svg {
+          transition: all 0.3s ease;
+        }
+      }
+
+      .--transform__btn {
+        svg {
+          transform: rotate(45deg);
+          transform-origin: 50%;
         }
       }
 
@@ -259,6 +387,16 @@
       .btn__play {
         display: none;
 
+        @include btn__ether;
+
+        .ether--pause {
+          opacity: 0;
+        }
+
+        .ether--play {
+          opacity: 1;
+        }
+
         svg {
           display: block;
         }
@@ -269,6 +407,16 @@
 
         @include adaptive($tablet) {
           display: none;
+        }
+      }
+
+      .ether__btn--toggle {
+        .ether--pause {
+          opacity: 1;
+        }
+
+        .ether--play {
+          opacity: 0;
         }
       }
 
@@ -302,7 +450,7 @@
             }
           }
 
-          &__btn--toggle {
+          .ether__btn--toggle {
             .ether--pause {
               opacity: 1;
             }
@@ -355,5 +503,72 @@
         }
       }
     }
+  }
+
+  .players {
+    display: none;
+
+    &__content {
+      display: flex;
+      padding: 9px 0 6px;
+      width: 100%;
+
+      .ether {
+        width: 50%;
+
+        &:first-child {
+          border-right: 1px solid $gray;
+        }
+
+        &:last-child {
+          padding-left: 30px;
+        }
+
+        &__info {
+          display: flex;
+          flex-direction: column;
+
+          .ether__title {
+            font-size: 10px;
+            line-height: 10px;
+            color: $dark-gray;
+          }
+
+          .ether__descr {
+            font-size: 14px;
+            line-height: 14px;
+          }
+        }
+
+        &__btn {
+          width: 24px;
+          height: 24px;
+
+          @include btn__ether;
+
+          .ether--pause {
+            opacity: 0;
+          }
+
+          .ether--play {
+            opacity: 1;
+          }
+        }
+
+        .ether__btn--toggle {
+          .ether--pause {
+            opacity: 1;
+          }
+
+          .ether--play {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .--players__block {
+    display: block;
   }
 }

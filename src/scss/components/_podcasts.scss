@@ -150,6 +150,24 @@
                   }
                 }
               }
+
+              .card__play {
+                opacity: 1;
+              }
+
+              .card__pause {
+                opacity: 0;
+              }
+            }
+
+            .card__btn--toggle {
+              .card__play {
+                opacity: 0;
+              }
+
+              .card__pause {
+                opacity: 1;
+              }
             }
           }
 
