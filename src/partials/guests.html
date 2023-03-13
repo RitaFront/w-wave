@@ -8,9 +8,9 @@
         и люди науки, историки, филологи и много других интересных гостей!
       </p>
       <div class="guests__info">
-        <ul class="info__list list-reset">
-          <li class="info__item --opened">
-            <button class="info__btn btn-reset">
+        <ul class="info__list list-reset accordion-container">
+          <li class="info__item ac">
+            <button class="info__btn btn-reset ac-trigger">
               Блогеры
               <svg
                 width="48"
@@ -34,7 +34,82 @@
                 />
               </svg>
             </button>
-            <div class="info__people">
+            <div class="info__people ac-panel">
+              <ul class="people__list list-reset ac-text">
+                <li class="people__item">
+                  <a href="" class="people__link">Сергей Денисов</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Евгений Войновский</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Олег Свиридовский</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Денис Тельман</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Матвей Мечников</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link --active">Ольга Мартынова</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Владислав Кауперс</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Юрий Горин</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Константин Прусино</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Дмитрий Михалок</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Михаил Пожитников</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Максим Сергеев</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Иван Калитников</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Пётр Пиотровский</a>
+                </li>
+                <li class="people__item">
+                  <a href="" class="people__link">Георгий Полуян</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="info__item ac">
+            <button class="info__btn btn-reset ac-trigger">
+              Арт-критики
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="20"
+                  stroke="#A1A6B4"
+                  stroke-width="2"
+                />
+                <path
+                  d="M16 22L24 30L32 22"
+                  stroke="#A1A6B4"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                />
+              </svg>
+            </button>
+            <div class="info__people ac-panel">
               <ul class="people__list list-reset">
                 <li class="people__item">
                   <a href="" class="people__link">Сергей Денисов</a>
@@ -84,34 +159,8 @@
               </ul>
             </div>
           </li>
-          <li class="info__item">
-            <button class="info__btn btn-reset">
-              Арт-критики
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 48 48"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="24"
-                  cy="24"
-                  r="20"
-                  stroke="#A1A6B4"
-                  stroke-width="2"
-                />
-                <path
-                  d="M16 22L24 30L32 22"
-                  stroke="#A1A6B4"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                />
-              </svg>
-            </button>
-          </li>
-          <li class="info__item">
-            <button class="info__btn btn-reset">
+          <li class="info__item ac">
+            <button class="info__btn btn-reset ac-trigger">
               Художники
               <svg
                 width="48"
@@ -136,8 +185,8 @@
               </svg>
             </button>
           </li>
-          <li class="info__item">
-            <button class="info__btn btn-reset">
+          <li class="info__item ac">
+            <button class="info__btn btn-reset ac-trigger">
               Люди науки
               <svg
                 width="48"
@@ -162,8 +211,8 @@
               </svg>
             </button>
           </li>
-          <li class="info__item">
-            <button class="info__btn btn-reset">
+          <li class="info__item ac">
+            <button class="info__btn btn-reset ac-trigger">
               Историки
               <svg
                 width="48"
@@ -188,8 +237,8 @@
               </svg>
             </button>
           </li>
-          <li class="info__item">
-            <button class="info__btn btn-reset">
+          <li class="info__item ac">
+            <button class="info__btn btn-reset ac-trigger">
               Филологи
               <svg
                 width="48"
