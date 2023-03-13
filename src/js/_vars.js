@@ -28,4 +28,10 @@ export default {
     btn: document.querySelector(".podcasts__btn"),
   },
   playlist: document.querySelectorAll(".playlist__item"),
+  guests: {
+    link: document.querySelectorAll(".people__link"),
+    img: document.querySelector(".author__img"),
+    title: document.querySelector(".author__title"),
+    descr: document.querySelector(".author__descr"),
+  },
 };

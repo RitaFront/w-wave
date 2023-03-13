@@ -144,13 +144,30 @@
                   line-height: 16px;
                   color: $white;
 
+                  @include hover {
+                    color: $light-violet;
+                  }
+
+                  &:focus {
+                    background-color: $white;
+                    color: $violet;
+                    outline: 5px solid $white;
+                    outline-offset: -1px;
+                  }
+
+                  &:active {
+                    color: $violet;
+                    outline: none;
+                    background-color: transparent;
+                  }
+
                   @include adaptive($phone) {
                     font-size: 14px;
                   }
+                }
 
-                  &.--active {
-                    color: $light-violet;
-                  }
+                .--active {
+                  color: $violet;
                 }
               }
             }
