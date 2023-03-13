@@ -19,12 +19,15 @@ vars.btnPlay.addEventListener("click", (e) => {
 
 //кнопка play в podcasts
 
-vars.podcasts.btnPlay.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    btn.classList.toggle("card__btn--toggle");
+export function podcastsPlayPause() {
+  const btnPlay = document.querySelectorAll(".card__btn");
+  btnPlay.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      btn.classList.toggle("card__btn--toggle");
+    });
   });
-});
+}
 
 //кнопка play в playlists
 

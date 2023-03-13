@@ -1,5 +1,6 @@
 import vars from "./_vars";
 import { data } from "./_podcastsObj";
+import { podcastsPlayPause } from "./_play-pause";
 
 let start = 8;
 let limit = 2;
@@ -121,6 +122,7 @@ function createPodcasts(data) {
   </div>`;
     vars.podcasts.list.appendChild(element);
   });
+  podcastsPlayPause();
 }
 
 function loadData() {

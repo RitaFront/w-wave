@@ -24,7 +24,6 @@ export default {
   btnHeader: document.querySelector(".header__bottom__btn"),
   players: document.querySelector(".players"),
   podcasts: {
-    btnPlay: document.querySelectorAll(".card__btn"),
     list: document.querySelector(".podcasts__cards"),
     btn: document.querySelector(".podcasts__btn"),
   },
