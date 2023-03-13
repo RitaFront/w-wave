@@ -112,16 +112,11 @@
           }
 
           .info__people {
-            padding: 30px 0;
-
-            @include adaptive($phone) {
-              padding: 19px 0;
-            }
-
             .people__list {
               display: flex;
               flex-wrap: wrap;
               gap: 13px 30px;
+              padding: 30px 0;
 
               @include adaptive($small-desktop) {
                 gap: 13px 29px;
@@ -133,6 +128,7 @@
 
               @include adaptive($phone) {
                 gap: 23px 61px;
+                padding: 19px 0;
               }
 
               .people__item {
