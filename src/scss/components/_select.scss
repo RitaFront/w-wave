@@ -1,0 +1,121 @@
+.choices {
+  margin-top: 8px;
+
+  @include hover {
+    .choices__inner {
+      background-color: $dark-white;
+    }
+  }
+
+  &.is-focused {
+    background-color: $light-gray;
+    outline: 1px solid $violet;
+    // outline-offset: -1px;
+    border-radius: 10px;
+  }
+
+  &:active {
+    background-color: $gray;
+    border-radius: 10px;
+  }
+
+  &__inner {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: $black;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 10px;
+    border: none;
+    padding: 11px 0 12px 12px;
+    background-color: $light-gray;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.is-open .choices__inner {
+  border-radius: 10px;
+}
+
+.choices[data-type*="select-one"]::after {
+  border-style: unset;
+  background-image: url("../../img/broadcasts/arrow.png");
+  background-repeat: no-repeat;
+  width: 13px;
+  height: 9px;
+  margin-top: 0;
+  transform: translateY(-30%);
+  right: 15px;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.choices[data-type*="select-one"].is-open::after {
+  margin-top: 0;
+  transform: rotate(180deg) translateY(30%);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.is-open .choices__list--dropdown,
+.is-open .choices__list[aria-expanded] {
+  border-color: $gray;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  border: 1px solid $gray;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-top: -9px;
+}
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+  padding: 12px;
+  font-family: "Muller", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $dark-gray;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item:nth-child(1) {
+  padding-top: 21px;
+}
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item:not(:first-child) {
+  border-top: 1px solid $gray;
+}
+
+.choices__list--dropdown .choices__item--selectable::after,
+.choices__list[aria-expanded] .choices__item--selectable::after {
+  content: unset;
+}
+
+.choices__list--dropdown {
+  .choices__item--selectable {
+    transition: all 0.3s ease-in-out;
+  }
+  .choices__item--selectable:hover {
+    @include hover {
+      background-color: $dark-white;
+      color: $black;
+      border-top: 1px solid $dark-white;
+    }
+  }
+
+  .choices__item--selectable:hover + .choices__item--selectable {
+    border-top: 1px solid $dark-white;
+  }
+}
+
+.is-selected {
+  display: none;
+}
