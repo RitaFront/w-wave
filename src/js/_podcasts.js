@@ -1,8 +1,8 @@
 import vars from "./_vars";
 import { data } from "./_podcastsObj";
 
-let start = 0;
-let limit = 8;
+let start = 8;
+let limit = 2;
 
 function createPodcasts(data) {
   data.forEach((item) => {
@@ -133,6 +133,11 @@ function loadData() {
   }
 }
 
-loadData();
+function podcastsCard(obj) {
+  const newData = obj.slice(0, start);
+  createPodcasts(newData);
+}
+
+podcastsCard(data);
 
 vars.podcasts.btn.addEventListener("click", loadData);
