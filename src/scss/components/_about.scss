@@ -232,6 +232,7 @@
       }
 
       .label__textarea {
+        position: relative;
         max-width: 920px;
         width: 100%;
         display: block;
@@ -250,7 +251,7 @@
         color: $white;
         outline: none;
 
-        &.--error {
+        &.just-validate-error-field {
           border: 1px solid $red;
         }
 
@@ -283,6 +284,7 @@
         }
 
         .label__input {
+          position: relative;
           max-width: 445px;
           width: 100%;
 
@@ -303,7 +305,7 @@
           font-size: 20px;
           line-height: 20px;
 
-          &.--error {
+          &.just-validate-error-field {
             border: 1px solid $red;
           }
 
@@ -365,6 +367,14 @@
           line-height: 12px;
           color: $white;
           height: 14px;
+
+          &:has(.just-validate-error-field) {
+            color: $red;
+
+            span {
+              border: 1px solid $red;
+            }
+          }
 
           @include adaptive($phone) {
             font-size: 9px;

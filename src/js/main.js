@@ -11,3 +11,4 @@ import "./_select";
 import "./_accordion";
 import "./_guests";
 import "./_guestsObj";
+import "./_validate";

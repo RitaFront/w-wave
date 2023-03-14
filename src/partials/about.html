@@ -129,7 +129,11 @@
         </ul>
       </div>
     </div>
-    <form class="form">
+    <form
+      class="form"
+      action="https://jsonplaceholder.typicode.com/posts"
+      method="post"
+    >
       <div class="container">
         <label for="form-message" class="label label__textarea">
           <textarea
@@ -151,6 +155,7 @@
               required
               name="input-name"
               id="input-name"
+              class="input-name"
             />
           </label>
           <label for="input-email" class="label label__input">
@@ -160,13 +165,14 @@
               required
               name="input-email"
               id="input-email"
+              class="input-email"
             />
           </label>
         </div>
         <button class="form__btn btn-reset">Отправить</button>
         <div class="form__check">
           <label for="check">
-            <input type="checkbox" name="check" id="check" />
+            <input type="checkbox" name="check" id="check" required />
             Согласен на обработку персональных данных
             <span></span>
           </label>
