@@ -1,5 +1,7 @@
 .choices {
   margin-top: 8px;
+  border: 1px solid $light-gray;
+  border-radius: 11px;
 
   @include hover {
     .choices__inner {
@@ -9,7 +11,7 @@
 
   &.is-focused {
     background-color: $light-gray;
-    outline: 1px solid $violet;
+    border: 1px solid $violet;
     // outline-offset: -1px;
     border-radius: 10px;
   }
@@ -27,12 +29,13 @@
     font-size: 16px;
     line-height: 16px;
     border-radius: 10px;
-    border: none;
+    // border: 1px solid $light-gray;
     padding: 11px 0 12px 12px;
     background-color: $light-gray;
     transition: all 0.3s ease-in-out;
     position: relative;
     z-index: 2;
+    border: none;
   }
 }
 
