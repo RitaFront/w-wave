@@ -465,3 +465,25 @@
     }
   }
 }
+
+@mixin burger__close {
+  @include hover {
+    svg rect {
+      fill: $light-violet;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    svg rect {
+      fill: $light-violet;
+    }
+  }
+
+  &:active {
+    svg rect {
+      fill: $dark-violet;
+    }
+  }
+}

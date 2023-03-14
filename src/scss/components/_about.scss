@@ -350,7 +350,12 @@
       }
 
       &__check {
+        position: relative;
         margin-top: 30px;
+
+        .just-validate-error-label {
+          display: none;
+        }
 
         @include adaptive($phone) {
           margin-top: 19px;

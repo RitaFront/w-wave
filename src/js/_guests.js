@@ -19,6 +19,8 @@ function createAuthor(dataAttribute, title) {
   if (!dataAttribute) {
     vars.guests.title.textContent = "Не найдено :(";
     vars.guests.img.setAttribute("src", "../img/guests/user.png");
+    vars.guests.imgTablet.setAttribute("srcset", "../img/guests/user.png");
+    vars.guests.imgPhone.setAttribute("srcset", "../img/guests/user.png");
     vars.guests.descr.textContent = "";
     return;
   }
@@ -26,6 +28,8 @@ function createAuthor(dataAttribute, title) {
   const user = data.filter((item) => item.name === dataAttribute);
 
   vars.guests.img.setAttribute("src", `${user[0].src}.jpg`);
+  vars.guests.imgTablet.setAttribute("srcset", `${user[0].src}.jpg`);
+  vars.guests.imgPhone.setAttribute("srcset", `${user[0].src}.jpg`);
   vars.guests.title.textContent = title;
   vars.guests.descr.textContent = user[0].descr;
 }

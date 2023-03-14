@@ -108,7 +108,7 @@
           width: 100vw;
           height: 100vh;
           left: 0;
-          top: 0;
+          top: 60px;
           background-color: $gray;
           z-index: 2;
 
@@ -116,10 +116,14 @@
             padding: 80px 0 0;
           }
 
+          @include adaptive($phone) {
+            top: 54px;
+          }
+
           .container {
             width: 100%;
             display: flex;
-            align-items: center;
+            padding-top: 106px;
             background-image: url("../../img/header/bg_burger.png"),
               url("../../img/header/bg_burger-2.png");
             background-repeat: no-repeat;
@@ -135,7 +139,9 @@
 
           .menu__close {
             position: absolute;
-            top: 88px;
+            top: 28px;
+
+            @include burger__close;
 
             @include adaptive($tablet) {
               top: 28px;
@@ -144,7 +150,9 @@
           }
 
           .burger__content {
-            background-color: $white;
+            @include adaptive($tablet) {
+              background-color: $white;
+            }
 
             .menu__list {
               display: flex;
@@ -179,6 +187,9 @@
                   font-size: 20px;
                   line-height: 20px;
                   color: $black;
+                  z-index: 1;
+
+                  @include link-states(-10px, -4px, 20px, 8px);
                 }
               }
             }
@@ -201,6 +212,9 @@
                   font-size: 16px;
                   line-height: 16px;
                   color: $black;
+                  z-index: 1;
+
+                  @include link-states(-5px, -3px, 10px, 6px);
                 }
               }
             }
@@ -249,6 +263,7 @@
           padding: 10px 31px;
           border: 2px solid $black;
           border-radius: 77px;
+          color: $black;
 
           @include btn__header;
 

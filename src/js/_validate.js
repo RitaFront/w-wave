@@ -45,7 +45,7 @@ validation
       errorMessage: "Не достаточное количество символов",
     },
   ])
-  .addField("#check", [
+  .addField(".checkbox", [
     {
       rule: "required",
     },
@@ -54,3 +54,23 @@ validation
     alert("Форма отправлена");
     document.querySelector(".form").reset();
   });
+
+const validationPopup = new JustValidate(".popup__form");
+
+validationPopup
+  .addField("#login", [
+    {
+      rule: "required",
+      errorMessage: "Вы не ввели логин",
+    },
+  ])
+  .addField("#password", [
+    {
+      rule: "required",
+      errorMessage: "Вы не ввели пароль",
+    },
+    {
+      rule: "password",
+      errorMessage: "Вы не корректно ввели пароль",
+    },
+  ]);

@@ -72,6 +72,13 @@
         font-size: 20px;
         line-height: 30px;
         color: $violet;
+        z-index: 1;
+
+        @include link-states(-5px, -3px, 10px, 6px);
+
+        @include hover {
+          color: $light-violet;
+        }
 
         @include adaptive($tablet) {
           font-size: 12px;
@@ -94,6 +101,7 @@
       .popup__label {
         max-width: 526px;
         width: 100%;
+        position: relative;
 
         @include adaptive($ipad) {
           max-width: 459px;
@@ -107,6 +115,8 @@
           border-radius: 40px;
           width: 100%;
           color: $white;
+
+          @include input;
 
           @include adaptive($tablet) {
             padding: 12px 0 12px 18px;
@@ -134,6 +144,8 @@
         background-color: $violet;
         border-radius: 40px;
         max-width: 167px;
+
+        @include btn;
 
         @include adaptive($tablet) {
           max-width: 160px;
@@ -178,6 +190,80 @@
         .popup__social {
           width: 40px;
           height: 100%;
+
+          @include hover {
+            &:nth-child(1) {
+              path {
+                fill: $violet;
+              }
+            }
+
+            &:nth-child(2) {
+              rect {
+                fill: $violet;
+              }
+            }
+
+            &:nth-child(3) {
+              rect {
+                fill: $violet;
+              }
+            }
+          }
+
+          &:nth-child(1) {
+            .popup__social__link:focus {
+              outline: none;
+
+              path {
+                fill: $light-violet;
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            .popup__social__link:focus {
+              outline: none;
+
+              rect {
+                fill: $light-violet;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            .popup__social__link:focus {
+              outline: none;
+
+              rect {
+                fill: $light-violet;
+              }
+            }
+          }
+
+          &:nth-child(1) {
+            .popup__social__link:active {
+              path {
+                fill: $dark-violet;
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            .popup__social__link:active {
+              rect {
+                fill: $dark-violet;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            .popup__social__link:active {
+              rect {
+                fill: $dark-violet;
+              }
+            }
+          }
 
           &__link {
             display: block;

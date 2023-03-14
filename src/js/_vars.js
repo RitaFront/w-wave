@@ -31,6 +31,8 @@ export default {
   guests: {
     link: document.querySelectorAll(".people__link"),
     img: document.querySelector(".author__img"),
+    imgTablet: document.querySelector(".author__img__tablet"),
+    imgPhone: document.querySelector(".author__img__phone"),
     title: document.querySelector(".author__title"),
     descr: document.querySelector(".author__descr"),
   },
