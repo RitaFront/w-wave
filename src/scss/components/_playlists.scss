@@ -381,7 +381,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url("../../img/playlists/play_btn.png");
+            background-image: url("../img/playlists/play_btn.png");
             background-repeat: no-repeat;
             background-position: center center;
             opacity: 0;
@@ -470,7 +470,7 @@
 
       .playlist--toggle {
         picture::after {
-          background-image: url("../../img/playlists/pause.png");
+          background-image: url("../img/playlists/pause.png");
         }
       }
     }

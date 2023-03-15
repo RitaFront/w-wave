@@ -3,12 +3,12 @@
   display: flex;
   flex-direction: column;
   padding: 94px 0 10px;
-  background-image: url("../../img/footer/hr.png");
+  background-image: url("../img/footer/hr.png");
   background-repeat: no-repeat;
   background-position: bottom 37px left;
 
   @include adaptive($small-desktop) {
-    background-image: url("../../img/footer/hr_1024.png");
+    background-image: url("../img/footer/hr_1024.png");
   }
 
   @include adaptive($phone) {
@@ -121,6 +121,12 @@
               font-size: 16px;
               line-height: 16px;
               color: $white;
+
+              @include link-states(-5px, -3px, 10px, 6px);
+
+              &:focus {
+                background-color: $light-violet;
+              }
 
               @include adaptive($phone) {
                 font-size: 12px;

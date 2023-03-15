@@ -18,9 +18,9 @@ vars.guests.link.forEach((item) => {
 function createAuthor(dataAttribute, title) {
   if (!dataAttribute) {
     vars.guests.title.textContent = "Не найдено :(";
-    vars.guests.img.setAttribute("src", "../img/guests/user.png");
-    vars.guests.imgTablet.setAttribute("srcset", "../img/guests/user.png");
-    vars.guests.imgPhone.setAttribute("srcset", "../img/guests/user.png");
+    vars.guests.img.setAttribute("src", "./img/guests/user.png");
+    vars.guests.imgTablet.setAttribute("srcset", "./img/guests/user.png");
+    vars.guests.imgPhone.setAttribute("srcset", "./img/guests/user.png");
     vars.guests.descr.textContent = "";
     return;
   }

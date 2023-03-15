@@ -36,8 +36,8 @@
 
       &.--bg {
         @include adaptive($ipad) {
-          background-image: url("../../img/about/bg-1_768.png"),
-            url("../../img/about/bg-2_768.png");
+          background-image: url("../img/about/bg-1_768.png"),
+            url("../img/about/bg-2_768.png");
           background-repeat: no-repeat;
           background-position: left bottom, right 114px bottom;
         }
@@ -48,13 +48,13 @@
       }
 
       .container.--bg {
-        background-image: url("../../img/about/bg-1.png"),
-          url("../../img/about/bg-2.png");
+        background-image: url("../img/about/bg-1.png"),
+          url("../img/about/bg-2.png");
         background-repeat: no-repeat, no-repeat;
         background-position: top right 299px, top 17px right 15px;
 
         @include adaptive($small-desktop) {
-          background-image: url("../../img/about/bg-2.png");
+          background-image: url("../img/about/bg-2.png");
           background-repeat: no-repeat;
           background-position: top 50% right 15px;
         }
@@ -439,7 +439,7 @@
 
             & + span::before {
               content: "";
-              background-image: url("../../img/about/ok.png");
+              background-image: url("../img/about/ok.png");
               background-repeat: no-repeat;
               background-position: center;
               position: absolute;
