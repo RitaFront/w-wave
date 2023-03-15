@@ -17,7 +17,7 @@
     </div>
     <div class="about__quests">
       <div class="container">
-        <button class="about__btn-left about__btn btn-reset">
+        <button class="about__btn-left about__btn btn-reset swiper-button-prev">
           <svg
             width="42"
             height="42"
@@ -41,7 +41,9 @@
             />
           </svg>
         </button>
-        <button class="about__btn-right about__btn btn-reset">
+        <button
+          class="about__btn-right about__btn btn-reset swiper-button-next"
+        >
           <svg
             width="42"
             height="42"
@@ -65,68 +67,124 @@
             />
           </svg>
         </button>
-        <ul class="slider list-reset --none">
-          <li class="slider__card">
-            <picture>
-              <source
-                srcset="../img/about/people-1.jpg"
-                media="(max-width: 1023px)"
-              />
-              <source
-                srcset="../img/about/people-1_1024.jpg"
-                media="(max-width: 1199px)"
-              />
-              <img src="../img/about/people-1.jpg" alt="" />
-            </picture>
-            <div class="slider__info">
-              <span class="slider__title"> Дмитрий Гутенберг </span>
-              <span class="slider__descr">
-                Эксперт (ну, почти) по всем вопросам (почти)
-              </span>
-            </div>
-          </li>
-          <li class="slider__card">
-            <picture>
-              <source
-                srcset="../img/about/people-2.jpg"
-                media="(max-width: 1023px)"
-              />
-              <source
-                srcset="../img/about/people-2_1024.jpg"
-                media="(max-width: 1199px)"
-              />
-              <img src="../img/about/people-2.jpg" alt="" />
-            </picture>
-            <div class="slider__info">
-              <span class="slider__title"> Анна Васильева </span>
-              <span class="slider__descr">
-                Как я здесь оказалась? А главное — зачем?
-              </span>
-            </div>
-          </li>
-          <li class="slider__card">
-            <picture>
-              <img src="../img/about/people-3.png" alt="" />
-            </picture>
-            <div class="slider__info">
-              <span class="slider__title"> Пётр Дмитриевский</span>
-              <span class="slider__descr">
-                Господа! Внимание! Благодарю за внимание!
-              </span>
-            </div>
-          </li>
-          <li class="slider__card">
-            <picture>
-              <img src="../img/about/people-4.jpg" alt="" />
-            </picture>
-            <div class="slider__info">
-              <span class="slider__title">Татьяна Флеганова</span>
-              <span class="slider__descr">
-                Одна я в пальто стою красивая, а вокруг…
-              </span>
-            </div>
-          </li>
-        </ul>
+        <div class="swiper">
+          <ul class="slider list-reset swiper-wrapper">
+            <li class="slider__card swiper-slide">
+              <picture>
+                <source
+                  srcset="../img/about/people-1.jpg"
+                  media="(max-width: 1023px)"
+                />
+                <source
+                  srcset="../img/about/people-1_1024.jpg"
+                  media="(max-width: 1199px)"
+                />
+                <img src="../img/about/people-1.jpg" alt="" />
+              </picture>
+              <div class="slider__info">
+                <span class="slider__title"> Дмитрий Гутенберг </span>
+                <span class="slider__descr">
+                  Эксперт (ну, почти) по всем вопросам (почти)
+                </span>
+              </div>
+            </li>
+            <li class="slider__card swiper-slide">
+              <picture>
+                <source
+                  srcset="../img/about/people-2.jpg"
+                  media="(max-width: 1023px)"
+                />
+                <source
+                  srcset="../img/about/people-2_1024.jpg"
+                  media="(max-width: 1199px)"
+                />
+                <img src="../img/about/people-2.jpg" alt="" />
+              </picture>
+              <div class="slider__info">
+                <span class="slider__title"> Анна Васильева </span>
+                <span class="slider__descr">
+                  Как я здесь оказалась? А главное — зачем?
+                </span>
+              </div>
+            </li>
+            <li class="slider__card swiper-slide">
+              <picture>
+                <source
+                  srcset="../img/about/people-3.png"
+                  media="(max-width: 1023px)"
+                />
+                <source
+                  srcset="../img/about/people-3_1024.jpg"
+                  media="(max-width: 1199px)"
+                />
+                <img src="../img/about/people-3.png" alt="" />
+              </picture>
+              <div class="slider__info">
+                <span class="slider__title"> Пётр Дмитриевский</span>
+                <span class="slider__descr">
+                  Господа! Внимание! Благодарю за внимание!
+                </span>
+              </div>
+            </li>
+            <li class="slider__card swiper-slide">
+              <picture>
+                <source
+                  srcset="../img/about/people-4.jpg"
+                  media="(max-width: 1023px)"
+                />
+                <source
+                  srcset="../img/about/people-4_1024.jpg"
+                  media="(max-width: 1199px)"
+                />
+                <img src="../img/about/people-4.jpg" alt="" />
+              </picture>
+              <div class="slider__info">
+                <span class="slider__title">Татьяна Флеганова</span>
+                <span class="slider__descr">
+                  Одна я в пальто стою красивая, а вокруг…
+                </span>
+              </div>
+            </li>
+            <li class="slider__card swiper-slide">
+              <picture>
+                <source
+                  srcset="../img/about/people-5.jpg"
+                  media="(max-width: 1023px)"
+                />
+                <source
+                  srcset="../img/about/people-5_1024.jpg"
+                  media="(max-width: 1199px)"
+                />
+                <img src="../img/about/people-5.jpg" alt="" />
+              </picture>
+              <div class="slider__info">
+                <span class="slider__title"> Фёдор Прокопьев </span>
+                <span class="slider__descr">
+                  Привет! Я фотограф, музыкант, ведущий
+                </span>
+              </div>
+            </li>
+            <li class="slider__card swiper-slide">
+              <picture>
+                <source
+                  srcset="../img/about/people-6.jpg"
+                  media="(max-width: 1023px)"
+                />
+                <source
+                  srcset="../img/about/people-6_1024.jpg"
+                  media="(max-width: 1199px)"
+                />
+                <img src="../img/about/people-6.jpg" alt="" />
+              </picture>
+              <div class="slider__info">
+                <span class="slider__title"> Светлана Кортнева </span>
+                <span class="slider__descr">
+                  Художник-оформитель. Оформляю
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <form
